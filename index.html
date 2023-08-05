@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increament</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .red{
+            width: 300px;
+            height: 80px;
+            border-radius: 15px;
+            background-color: rgb(106, 2, 2);
+            border: 1px solid rgb(43, 43, 43);
+            color: white;
+            font-size: 1.6rem;
+        }
+        .green{
+            width: 300px;
+            height: 80px;
+            border-radius: 15px;
+            background-color: green;
+            border: 1px solid rgb(43, 43, 43);
+            color: white;
+            font-size: 1.6rem;
+        }
+        .green:hover{
+            transition: all 0.5s;
+            background-color: rgb(2, 90, 2);
+            transform: scale(1.2);
+        }
+        .red:hover{
+            transition: all 0.5s;
+            background-color: rgb(72, 1, 1);
+            transform: scale(1.2);
+        }
+        .buttons{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            
+        }
+        .buttons{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+           
+        }
+        .btn{
+            margin: 20px;
+        }
+        .heading{
+            color: rgb(3, 3, 114);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Increament and saving entries using JavaScript</h1>
+    <div class="buttons">
+       
+        <button class="red btn" onclick="add()">
+            Add
+        </button>
+        <button class="green btn" onclick="save()">
+    save
+        </button>
+        <div class="info">
+            <h2 id="count"></h2>
+            <p id="save">Previous Entries: </p>
+        </div>
+    </div>
+
+  
+   
+<script>
+    count=0
+function add(){
+    count+=1
+    let counts=document.getElementById('count')
+    counts.innerText=count
+}
+function save(){
+   
+    let saves=document.getElementById('save')
+    saves.innerText+=count+","
+}
+
+</script>
+</body>
+</html>
